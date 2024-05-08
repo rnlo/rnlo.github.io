@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>rnlo.github.io</title>
+    <link rel="icon" href="tools.png">
+  </head>
+  <body>
+    <div id="links"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+        let directories = ['txt', 'md']
+        let linksDiv = document.getElementById('links')
+
+        directories.forEach((dir) => {
+          let link = document.createElement('a')
+          link.href = dir
+
+          let img = document.createElement('img')
+          img.src = dir + '/' + dir + '.png'
+          img.style.width = '64px'
+          img.style.height = '64px'
+          img.style.marginRight = '10px'
+
+          link.appendChild(img)
+          linksDiv.appendChild(link)
+        })
+      })
+    </script>
+  </body>
+</html>
